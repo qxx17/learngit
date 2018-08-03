@@ -9,9 +9,9 @@ Apply Variant AutoEncoder(VAE) on chembl molecules, based on the paper [Automati
 ## git usage guide
 
 ### 1. 查看命令：
-`git status`: 查看当前哪些文件被修改了，哪些文件需要被提交，如果你不知道接下来该敲什么git命令了，可以用git status看一下接下来该干什么
+`git status`: 查看当前哪些文件被修改了，哪些文件需要被提交，如果不知道接下来该敲什么git命令了，可以用git status看一下接下来该干什么
 
-`git branch`: 查看分支
+`git branch`: 查看分支，当前分支前有*标记；
 
 `git log`: 查看历史
 
@@ -21,7 +21,7 @@ Apply Variant AutoEncoder(VAE) on chembl molecules, based on the paper [Automati
 `git commit -m "这里写提交log信息"`: 提交暂存区的修改，使用git log可以看到做了一次版本的提交
 
 ### 3. 分支相关命令：
-master为主线，dev为开发线。每次从master新建一个分支dev，在dev分支上写完代码（实现一个小功能后），将dev merge到master上；
+master为主线，dev为开发线；每次从master新建一个分支dev，在dev分支上写完代码（实现一个小功能后），将dev merge到master上。
 
 `git branch`: 查看所有分支，当前分支前有*标记；
 
@@ -40,7 +40,7 @@ git pull <远程主机名> <远程分支名>:<本地分支名>
 
 `git push origin master:master` 将本地的master分支，推送到远程仓库（github）。
  
-### 5. git应用流程实例（试运行版）
+### 5. git应用流程实例（试运行版）:
 ① 将远程仓库的修改合并到本地（每次修改之前，最好先将远程的合并到本地）
 
 `$ git pull origin master:master`
@@ -49,7 +49,7 @@ git pull <远程主机名> <远程分支名>:<本地分支名>
 
 `$ git checkout -b dev`
 
-**此处修改代码，假如新建了a.py并修改了b.py**
+#### 此处修改代码，假如新建了a.py并修改了b.py
 
 ③ 将工作暂存
 首先使用查看有哪些修改
@@ -58,7 +58,7 @@ git pull <远程主机名> <远程分支名>:<本地分支名>
 
 命令行会提示：b.py文件做了修改，a.py文件被创建，这些改动可以暂存
 
-'''shell
+```shell
 On branch dev
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -67,7 +67,7 @@ Changes not staged for commit:
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
   a.py
-'''
+```
 
 然后使用`git add`将改动暂存
 
@@ -87,6 +87,8 @@ Untracked files:
 
 `git merge --no-ff dev`
 
-⑥ dev功能开发完毕，将改动保存到远程仓库:
+之后会弹出一个页面，写上merge的说明。linux下默认弹出vi编辑，写完按照下方提示，ctrl+x退出即可。
+
+⑥ dev功能开发完毕，将改动保存到远程仓库
 
 `git push origin master:master`
