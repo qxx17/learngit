@@ -9,7 +9,7 @@ Apply Variant AutoEncoder(VAE) on chembl molecules, based on the paper [Automati
 ## git usage guide
 
 ### 1. 查看命令：
-`git status`: 查看当前哪些文件被修改了，哪些文件需要被提交
+`git status`: 查看当前哪些文件被修改了，哪些文件需要被提交，如果你不知道接下来该敲什么git命令了，可以用git status看一下接下来该干什么
 `git branch`: 查看分支
 `git log`: 查看历史
 
